@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld2 from './components/HelloWorld2'
 import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld3 from './components/HelloWorld3.vue'
 
 const changeCount =(count) => {
   console.log(count)
@@ -12,6 +13,7 @@ const changeCount =(count) => {
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + Vite" name="测试props" @change="changeCount" />
   <HelloWorld2  />
+  <HelloWorld3 />
 </template>
 
 <style>
