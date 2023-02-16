@@ -12,18 +12,34 @@
   
 ---
 ## 2.快速上手  
-[脚手架](https://cn.vuejs.org/guide/quick-start.html#try-vue-online)：npm init vue@latest
+[脚手架(create-vue)](https://cn.vuejs.org/guide/quick-start.html#try-vue-online)：npm init vue@latest
     
       
 
 
 ---
-## 3.[常用语法及api](https://cn.vuejs.org/api/)
-全局api：createApp()、app.mount()、app.component()、app.directive()、app.use()、app.config()  
+## 3.[常用语法及使用](https://cn.vuejs.org/api/)
+`全局api`：createApp()、app.mount()、app.component()、app.directive()、app.use()、app.config()  
   
 
-组合式api：[setup()](https://cn.vuejs.org/api/composition-api-setup.html#basic-usage)、ref()、reactive()、watchEffect()
+`组合式api`：[setup()](https://cn.vuejs.org/api/composition-api-setup.html#basic-usage)  
+`响应式核心`：ref()、reactive()、watchEffect()、watch()  
+`响应式工具`：toRef()、toRefs()  
+`其他`：toRaw()、provide()、inject()、生命周期钩子  
+  
+`选项式api`：[为什么会有组合式api](https://cn.vuejs.org/guide/extras/composition-api-faq.html#what-is-composition-api)  
+  
+`内置指令`：[v-model](https://cn.vuejs.org/guide/components/v-model.html#multiple-v-model-bindings)、v-if、v-show、[v-memo](https://cn.vuejs.org/api/built-in-directives.html#v-memo)  
+`内置组件`：[Teleport](https://cn.vuejs.org/guide/built-ins/teleport.html)、[Suspense](https://cn.vuejs.org/guide/built-ins/suspense.html)  
+`特殊Attributes`：[ref](https://cn.vuejs.org/api/built-in-special-attributes.html#ref)  
+  
+  `单文件组件`：defineProps()、defineEmits()、defineExpose()、[CSS中的v-bind](https://cn.vuejs.org/api/sfc-css-features.html#v-bind-in-css)  
+    
+  `进阶API相关`、[从vue2迁移](https://v3-migration.vuejs.org/zh/)
 
 ---
-## 4.实战案例
+## 4.讨论  
+如何学习新知识  
+1......  
+2......
 

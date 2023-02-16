@@ -1,5 +1,5 @@
 <script setup>
-// import { ref } from 'vue'
+// import { ref, reactive, defineExpose, watchEffect, watch } from 'vue'
 // import {useRouter} from 'vue-router'
 
 
@@ -12,12 +12,23 @@ const info = {
 }
 
 const reactiveInfo = reactive(info);
+console.log('reactiveInfo', reactiveInfo)
+
+defineExpose({info: reactiveInfo}) // 向外暴露属性
 
 defineProps({
   msg: String,
 })
 const emit = defineEmits(['change'])
 
+console.log('toRaw', toRaw(reactiveInfo) === info) // true
+
+const ageRef = toRef(reactiveInfo, 'age')
+ageRef.value++
+console.log('reactiveInfo.age',reactiveInfo.age) // 13
+
+const infoRef = toRefs(reactiveInfo)
+console.log('infoRef', infoRef)
 
 const router = useRouter();
 const jump = () => {
@@ -31,10 +42,17 @@ const changeCount = () => {
   emit('change', count);
   // info.age++;
   reactiveInfo.age++;
-  console.log(reactiveInfo);
-  console.log(info)
+  // console.log(reactiveInfo);
+  // console.log(info)
 }
-
+watchEffect(() => {
+  console.log('count-change', count.value)
+})
+watch(count, (n,o) => {
+  console.log('n-o', n, o)
+}, {
+  immediate: true,
+})
 </script>
 
 <template>
